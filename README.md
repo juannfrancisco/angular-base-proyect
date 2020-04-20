@@ -8,7 +8,7 @@ Este proyecto fue generado con [Angular CLI](https://github.com/angular/angular-
 Ejecuta `ng serve` para iniciar el servidor web. Navega a `http://localhost:4200/`. La aplicación se recargara automaticamente al realizarse un cambio.
 
 
-## Structure
+## Components Structure 
 
 ```
 public ->
@@ -19,6 +19,11 @@ public ->
         HeaderPublicComponent
         FooterPublicComponent
 private ->
+    InicioPrivadoComponent
+    BienvenidoComponent
+    usuariosComponent ->
+        UsuarioCrearComponent
+        UsuarioEditarComponent
 
 ```
 

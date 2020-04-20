@@ -15,6 +15,7 @@ import { FooterPublicComponent } from './components/public/commons/footer-public
 import { InicioPrivadoComponent } from './components/private/inicio-privado/inicio-privado.component';
 import { BienvenidoComponent } from './components/private/bienvenido/bienvenido.component';
 import { UsuariosComponent } from './components/private/usuarios/usuarios/usuarios.component';
+import { UsuariosCrearComponent } from './components/private/usuarios/usuarios-crear/usuarios-crear.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { UsuariosComponent } from './components/private/usuarios/usuarios/usuari
     FooterPublicComponent,
     InicioPrivadoComponent,
     BienvenidoComponent,
-    UsuariosComponent
+    UsuariosComponent,
+    UsuariosCrearComponent
   ],
   imports: [
     BrowserModule,

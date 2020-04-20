@@ -6,6 +6,7 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { InicioPrivadoComponent } from './components/private/inicio-privado/inicio-privado.component';
 import { UsuariosComponent } from './components/private/usuarios/usuarios/usuarios.component';
+import { UsuariosCrearComponent } from './components/private/usuarios/usuarios-crear/usuarios-crear.component';
 
 
 const routes: Routes = [
@@ -18,6 +19,7 @@ const routes: Routes = [
       {path:'', component:BienvenidoComponent},
       {path:'inicio', component:BienvenidoComponent},
       {path:'usuarios', component:UsuariosComponent},
+      {path:'usuarios/crear', component:UsuariosCrearComponent},
     ]
 
   },
