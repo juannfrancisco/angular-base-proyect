@@ -21,20 +21,19 @@ public ->
 private ->
     InicioPrivadoComponent
     BienvenidoComponent
-    usuariosComponent ->
+    usuarios ->
+        UsuariosComponent
         UsuarioCrearComponent
         UsuarioEditarComponent
 
 ```
 
 
-## Code scaffolding
+## Nuevo Componentes 
 
 Agregar componentes publicos: `ng generate component components/public/ComponentName`.
 
 Agregar componentes privados: `ng generate component components/private/ComponentName`.
-
-
 
 
 

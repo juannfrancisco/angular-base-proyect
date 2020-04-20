@@ -8,6 +8,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class UsuariosCrearComponent implements OnInit {
 
+  nombre:string;
+  nombreUsuario:string;
+  email:string;
+  password:string;
+
   constructor(
     private router: Router,
   ) { }
@@ -19,7 +24,13 @@ export class UsuariosCrearComponent implements OnInit {
    * 
    */
   crearUsuario(){
-    this.router.navigateByUrl( "/privado/usuarios" );
+
+    console.log( this.nombre );
+    console.log( this.nombreUsuario );
+    console.log( this.email );
+    console.log( this.password );
+
+    //this.router.navigateByUrl( "/privado/usuarios" );
   }
 
 }
