@@ -8,10 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class UsuariosCrearComponent implements OnInit {
 
+  // Atributos
   nombre:string;
   nombreUsuario:string;
   email:string;
   password:string;
+
+  errorNombre:boolean;
 
   constructor(
     private router: Router,
@@ -24,6 +27,12 @@ export class UsuariosCrearComponent implements OnInit {
    * 
    */
   crearUsuario(){
+
+    if( !this.nombre ||  this.nombre == '' ){
+      this.errorNombre = true;
+    }else{
+      this.errorNombre = false;
+    }
 
     console.log( this.nombre );
     console.log( this.nombreUsuario );

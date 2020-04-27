@@ -14,6 +14,7 @@ const routes: Routes = [
   {path:'inicio',component:InicioComponent},
   {path:'login',component:LoginComponent},
   {path:'registro',component:RegistroComponent},
+  
   {path:'privado',component:InicioPrivadoComponent,
     children:[
       {path:'', component:BienvenidoComponent},
