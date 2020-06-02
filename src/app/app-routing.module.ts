@@ -1,3 +1,4 @@
+import { UsuariosEditarComponent } from './components/private/usuarios/usuarios-editar/usuarios-editar.component';
 import { BienvenidoComponent } from './components/private/bienvenido/bienvenido.component';
 import { RegistroComponent } from './components/public/registro/registro.component';
 import { LoginComponent } from './components/public/login/login.component';
@@ -21,6 +22,7 @@ const routes: Routes = [
       {path:'inicio', component:BienvenidoComponent},
       {path:'usuarios', component:UsuariosComponent},
       {path:'usuarios/crear', component:UsuariosCrearComponent},
+      {path:'usuarios/editar/:id', component:UsuariosEditarComponent},
     ]
 
   },

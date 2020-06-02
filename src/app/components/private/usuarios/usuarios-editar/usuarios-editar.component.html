@@ -1,13 +1,17 @@
 <div class="d-flex flex-wrap flex-md-nowrap pt-3 pb-2 mb-3 border-bottom" >
-    <h4>Nuevo Usuario</h4>
+    <h4>Editar Usuario</h4>
 </div>
     
 <div class="card">
     <div class="card-header">
-        Crear Usuario
+        Editar Usuario
     </div>
     <div class="card-body">
             <form>
+                <div class="form-group">
+                    <label >Id</label>
+                    <input type="text" disabled="disabled" class="form-control" name="idUsuario" [(ngModel)]="idUsuario">
+                </div>
                 <div class="form-group">
                     <label >Nombre de Usuario</label>
                     <input type="text" class="form-control" name="nombreUsuario" [(ngModel)]="nombreUsuario">
@@ -29,7 +33,7 @@
                         <option value="ALUMNO">Alumno</option>
                     </select>
                 </div>
-                <button type="submit" class="btn btn-primary btn-block" (click)="crearUsuario()">Crear Usuario</button>                
+                <button type="submit" class="btn btn-primary btn-block" (click)="editarUsuario()">Editar Usuario</button>                
             </form>
     </div>
 </div>

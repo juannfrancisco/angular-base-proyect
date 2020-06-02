@@ -14,6 +14,8 @@ export class UsuariosCrearComponent implements OnInit {
   nombreUsuario:string;
   email:string;
   password:string;
+  tipo:string;
+
 
   errorNombre:boolean;
 
@@ -38,7 +40,9 @@ export class UsuariosCrearComponent implements OnInit {
     user.email = this.email;
     user.username = this.nombreUsuario;
     user.password = this.password;
-    user.admin = false;
+    user.tipo = this.tipo;
+
+    // Validacion 
 
     this.services.crearUsuario( user ).subscribe( 
       data =>{

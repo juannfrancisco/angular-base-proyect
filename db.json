@@ -1,0 +1,39 @@
+{
+  "usuarios": [
+    {
+      "tipo": "PROFESOR",
+      "email": "juan.maldonado.leon@gmail.com",
+      "username": "test2",
+      "password": "1234",
+      "id": 1
+    },
+    {
+      "tipo": "ALUMNO",
+      "email": "wq",
+      "username": "test2",
+      "password": "qw",
+      "id": 2
+    },
+    {
+      "id": 3,
+      "email": "Test-1@gmail.com",
+      "username": "Test-1-editar",
+      "password": "Test-1",
+      "tipo": "PROFESOR"
+    },
+    {
+      "email": "juan.maldonado.leon@gmail.com",
+      "username": "juan",
+      "password": "123465",
+      "tipo": "PROFESOR",
+      "id": 4
+    }
+  ],
+  "cursos": [
+    {
+      "id": "1",
+      "nombre": "Arquitectura de Aplicaciones Web",
+      "descripcion": "Arquitectura de Aplicaciones Web"
+    }
+  ]
+}
