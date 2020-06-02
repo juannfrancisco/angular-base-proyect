@@ -1,3 +1,4 @@
+import { AuthGuard } from './guards/auth.guard';
 import { UsuariosEditarComponent } from './components/private/usuarios/usuarios-editar/usuarios-editar.component';
 import { BienvenidoComponent } from './components/private/bienvenido/bienvenido.component';
 import { RegistroComponent } from './components/public/registro/registro.component';
@@ -16,7 +17,7 @@ const routes: Routes = [
   {path:'login',component:LoginComponent},
   {path:'registro',component:RegistroComponent},
   
-  {path:'privado',component:InicioPrivadoComponent,
+  {path:'privado',component:InicioPrivadoComponent, canActivate: [AuthGuard], 
     children:[
       {path:'', component:BienvenidoComponent},
       {path:'inicio', component:BienvenidoComponent},
@@ -24,7 +25,6 @@ const routes: Routes = [
       {path:'usuarios/crear', component:UsuariosCrearComponent},
       {path:'usuarios/editar/:id', component:UsuariosEditarComponent},
     ]
-
   },
 
 ];

@@ -51,6 +51,11 @@ export class UserService {
   }
 
 
+  login( username:string, password:string  ){
+    return this.http.get<User[]>( "http://localhost:3000/usuarios?username="+username+"&password="+ password );
+  }
+
+
   // eliminar 
 
   // actualizar
