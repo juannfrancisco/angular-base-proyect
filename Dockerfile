@@ -1,0 +1,21 @@
+# imagen base
+FROM ubuntu:14.04  
+
+# Instalar Node apt-get 
+RUN sudo apt-get update \
+&& apt-get install -y curl  \
+&& curl -sL deb.nodesource.com/setup_10.x | bash - \
+&& apt-get install -y nodejs \
+&& npm install -g @angular/cli \
+&& mkdir app \
+&& apt-get remove -y curl \
+&& rm -rf /var/lib/apt/lists/*
+
+# Copia el directorio actual en el directorio del contenedor (/app)
+COPY . /app
+
+WORKDIR /app
+
+RUN npm install
+
+ENTRYPOINT [ "ng", "serve", "--host", "0.0.0.0" ]
