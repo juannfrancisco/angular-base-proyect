@@ -18,5 +18,6 @@ COPY . /app
 WORKDIR /app
 
 RUN npm install
+ENV PORT=80
 
 ENTRYPOINT [ "ng", "serve", "--host", "0.0.0.0" ]
