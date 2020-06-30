@@ -1,0 +1,20 @@
+version: '3.3'
+
+#docker run -p 80:80 --rm -d angular-prod-stage
+#docker run -p 3000:3000 --rm -d json-server
+
+services:
+  angularapp:
+    build: .
+    image: angular-prod-stage
+    ports: 
+      - '80:80'
+  jsonserver:
+    build:
+      context: .
+      dockerfile: Dockerfile.jsonserver
+    image: json-server
+    ports: 
+      - '3000:3000'
+    links:
+      - 'angularapp'
