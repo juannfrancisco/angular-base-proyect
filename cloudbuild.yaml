@@ -15,7 +15,7 @@ steps:
     - '--image'
     - 'gcr.io/$PROJECT_ID/angular-app:$BUILD_ID'
     - '--region'
-    - 'us-east-1'
+    - 'us-east1'
     - '--platform'
     - 'managed'
     - '--allow-unauthenticated'
