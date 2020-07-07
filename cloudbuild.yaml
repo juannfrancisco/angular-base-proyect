@@ -9,11 +9,18 @@ steps:
 
   - id: 'Build docker image angular'
     name: 'gcr.io/cloud-builders/docker'
-    args: ["build", "-t", "gcr.io/$PROJECT_ID/angular-base:latest", ".", "-f", "Dockerfile.angular"]
+    args: ["build", 
+    "-t", 
+    "gcr.io/$PROJECT_ID/angular-base:latest", ".", 
+    "-f", "Dockerfile.angular", 
+    "--cache-from", "gcr.io/$PROJECT_ID/angular-base:latest"]
 
   - id: 'Build docker image'
     name: 'gcr.io/cloud-builders/docker'
-    args: ["build", "-t", "gcr.io/$PROJECT_ID/angular-app:$BUILD_ID", ".", "-f", "Dockerfile.stage"]
+    args: ["build", 
+    "-t", "gcr.io/$PROJECT_ID/angular-app:$BUILD_ID", ".", 
+    "-f", "Dockerfile.stage", 
+    "--cache-from", "gcr.io/$PROJECT_ID/angular-base:latest"]]
 
   - id: 'Push docker image'
     name: 'gcr.io/cloud-builders/docker'
