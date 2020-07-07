@@ -15,6 +15,10 @@ steps:
     "-f", "Dockerfile.angular", 
     "--cache-from", "gcr.io/$PROJECT_ID/angular-base:latest"]
 
+  - id: 'Push docker image angular'
+    name: 'gcr.io/cloud-builders/docker'
+    args: ["push",  "gcr.io/$PROJECT_ID/angular-base:$BUILD_ID"]
+
   - id: 'Build docker image'
     name: 'gcr.io/cloud-builders/docker'
     args: ["build", 
