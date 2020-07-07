@@ -1,4 +1,16 @@
 steps:
+  - id: 'Pull image'
+  name: 'gcr.io/cloud-builders/docker'
+  entrypoint: 'bash'
+  args: [
+   '-c', 
+   'docker pull gcr.io/$PROJECT_ID/angular-base:latest || exit 0'
+  ]
+  
+  - id: 'Build docker image angular'
+    name: 'gcr.io/cloud-builders/docker'
+    args: ["build", "-t", "gcr.io/$PROJECT_ID/angular-base:latest", ".", "-f", "Dockerfile.angular"]
+
   - id: 'Build docker image'
     name: 'gcr.io/cloud-builders/docker'
     args: ["build", "-t", "gcr.io/$PROJECT_ID/angular-app:$BUILD_ID", ".", "-f", "Dockerfile.stage"]
