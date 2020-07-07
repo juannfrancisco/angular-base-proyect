@@ -17,7 +17,7 @@ steps:
 
   - id: 'Push docker image angular'
     name: 'gcr.io/cloud-builders/docker'
-    args: ["push",  "gcr.io/$PROJECT_ID/angular-base:$BUILD_ID"]
+    args: ["push",  "gcr.io/$PROJECT_ID/angular-base:latest"]
 
   - id: 'Build docker image'
     name: 'gcr.io/cloud-builders/docker'
